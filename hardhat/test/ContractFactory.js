@@ -12,9 +12,9 @@ describe("ContractFactory", function () {
     );
   }
 
-  async function deployContract(sampleFactory, contract) {
+  async function deployContract(factory, contract) {
     const params = utils.defaultAbiCoder.encode(["uint256"], [20]);
-    const bc = sampleFactory.bytecode + params.slice(2);
+    const bc = factory.bytecode + params.slice(2);
     const salt = utils.formatBytes32String("Hello World");
 
     const tx = await contract.deploy(bc, salt);

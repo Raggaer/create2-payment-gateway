@@ -15,7 +15,7 @@ describe("ContractFactory", function () {
   function deriveDrainAddress(factory, contract, owner) {
     const params = utils.defaultAbiCoder.encode(["address payable"], [owner]);
     const bc = factory.bytecode + params.slice(2); // Remove the 0x from the params
-    const salt = utils.formatBytes32String("Payment-#1");
+    const salt = utils.formatBytes32String("payment-test");
 
     return [bc, salt, deriveAddress(contract.address, bc, salt)];
   }

@@ -1,13 +1,7 @@
-# Sample Hardhat Project
+# hardhat
 
-This project demonstrates a basic Hardhat use case. It comes with a sample contract, a test for that contract, and a script that deploys that contract.
+Hardhat project containing Drain, CREATE2 Factory and some tests.
 
-Try running some of the following tasks:
-
-```shell
-npx hardhat help
-npx hardhat test
-REPORT_GAS=true npx hardhat test
-npx hardhat node
-npx hardhat run scripts/deploy.js
-```
+- Sample.sol: Contract used for testing CREATE2 Factory.
+- Drain.sol: Contract used for the payments drain.
+- ContractFactory.sol: Factory used to deploy any contract using the CREATE2 opcode.
